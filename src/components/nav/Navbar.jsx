@@ -1,6 +1,7 @@
 import React from 'react'
 import './Navbar.css'
 import logo from '../../assets/PCTRIO_LOGO.png'
+import { FaWhatsapp } from "react-icons/fa";
 
 const Navbar = () => {
   return (
@@ -14,7 +15,7 @@ const Navbar = () => {
         <li>Our Work</li>
         <li>Contact</li>
     </ul>
-    <span className='whatsapp'>Direct Message</span>
+    <span className='whatsapp'><FaWhatsapp size={18} style={{marginBottom:'-4px'}}/> Direct Message</span>
     </nav>
   )
 }
