@@ -10,6 +10,13 @@ nav {
   z-index: 100;
 }
 
+/* ------------------sticky navbar------------------ */
+.blur-nav{
+    backdrop-filter: blur(10px);
+    background: #0000001a;
+    transition: ease-in-out 0.5s;
+}
+
 nav h2 {
   font-size: 20px;
   font-weight: 500;

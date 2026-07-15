@@ -1,11 +1,21 @@
-import React from 'react'
+import { useState, useEffect } from 'react'
 import './Navbar.css'
 import logo from '../../assets/PCTRIO_LOGO.png'
 import { FaWhatsapp } from "react-icons/fa";
 
 const Navbar = () => {
+const [sticky, setSticky] = useState(false)
+
+useEffect(() => {
+    const handleScroll = () => {
+      setSticky(window.scrollY > 50)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   return (
-    <nav>
+    <nav className={sticky ? 'blur-nav' : ''}>
     <h2>PC<span>TRIO</span>
     </h2>
     <ul>
