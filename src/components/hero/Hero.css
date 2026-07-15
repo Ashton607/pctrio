@@ -22,10 +22,8 @@
   font-weight: 600;
   letter-spacing: 1px;
   text-transform: uppercase;
-  background: linear-gradient(135deg, #D9793F 0%, #C05621 40%, #7A3313 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #9b5216;
+  background-color: #FBE8D8;
   border: 1px solid #C97A3A;
   padding: 6px 14px;
   border-radius: 30px;
