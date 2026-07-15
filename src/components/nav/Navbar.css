@@ -63,6 +63,11 @@ nav ul li::after {
 nav ul li:hover::after {
   width: 100%;
 }
+
+nav ul li a {
+  text-decoration: none;
+  color: inherit;
+}
 .whatsapp {
   background-color: #25d366;
   color: #fff;
