@@ -10,7 +10,7 @@ const navigate = useNavigate()
   return (
     <div className='Hero'>
     <div className="hero-content">
-    <span className="hero-badge">EST.2026 - Douglas Internet Cafe</span>
+    <span className="hero-badge">Douglas Trusted Tech & Print Shop</span>
     <h1 className="hero-title">
           <span className="line1">We Fix it.</span>
           <span className="line2">We Print it.</span>
