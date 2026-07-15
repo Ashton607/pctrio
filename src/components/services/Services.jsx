@@ -86,7 +86,7 @@ const ServiceSection = ({ icon, title, cards }) => (
 
 const Services = () => {
   return (
-    <div className='Services'>
+    <div className='Services' id="services">
 
     <div className="services-content">
     <span className="services-badge">our services</span>

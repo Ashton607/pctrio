@@ -10,15 +10,13 @@ const Navbar = () => {
 const [sticky, setSticky] = useState(false)
 
 const navigate = useNavigate()
-  const location = useLocation()
+const location = useLocation()
 
   const handleServicesClick = () => {
     if (location.pathname !== '/') {
-      navigate('/')
-      // wait for navigation, then scroll
-      setTimeout(() => {
-        document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })
-      }, 100)
+      navigate('/', { state: { scrollTo: 'services' } })
+    } else {
+      document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })
     }
   }
 
