@@ -51,3 +51,125 @@
   color: #5f5f5f;
   width: 50%;
 }
+
+/*Services cards*/
+.services-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 20px;
+  box-sizing: border-box;
+}
+
+.service-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.section-heading h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #111;
+  margin: 0;
+}
+
+.section-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+}
+
+.section-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+
+.service-section:nth-of-type(1) .section-icon {
+  background-color: #1E3D2B;
+  color: #A8DFB0;
+}
+
+.service-section:nth-of-type(2) .section-icon {
+  background-color: #4A2A12;
+  color: #ffb87d;
+}
+
+.service-section:nth-of-type(3) .section-icon {
+  background-color: #1E3A5F;
+  color: #A8CDEE;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.service-card {
+  border-radius: 12px;
+  padding: 24px;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.service-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  transform: translateY(-4px);
+}
+.service-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background-color: #f1f2f5;
+  color: #444;
+  margin-bottom: 18px;
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.service-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.service-section:nth-of-type(1) .service-card:hover .service-icon {
+  transform: translateY(-14px);
+  background-color: #1E3D2B;
+  color: #A8DFB0;
+}
+.service-section:nth-of-type(2) .service-card:hover .service-icon {
+  transform: translateY(-14px);
+  background-color: #4A2A12;
+  color: #ffb87d;
+}
+.service-section:nth-of-type(3) .service-card:hover .service-icon {
+  transform: translateY(-14px);
+  background-color: #1E3A5F;
+  color: #A8CDEE;
+}
+
+.service-card h3 {
+  font-size: 17px;
+  font-weight: 700;
+  color: #111;
+  margin: 0 0 8px 0;
+}
+
+.service-card p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #6b7280;
+  margin: 0;
+}
