@@ -3,9 +3,12 @@ import './About.css'
 import aboutImg from '../../assets/aboutImg.jpg'
 import { FaRegStar,FaRegClock,FaRegCheckSquare } from "react-icons/fa";
 import { RiSpeakAiLine } from "react-icons/ri";
+import { useNavigate } from 'react-router-dom'
+import { IoIosArrowForward } from "react-icons/io";
 
 
 const About = () => {
+const navigate = useNavigate()
   return (
     <div className='About'>
 
@@ -68,6 +71,23 @@ const About = () => {
     If the same issue resurfaces, we fix it no charge, no questions.</span>
    </div>
    </div>
+   </div>
+
+   <div className="our-work-cta">
+    <div className="cta-text">
+    <h2 className="cta-title">next step.</h2>
+    <p className="cta-subtitle">
+    Have a question about our services or need to send us a file for printing? 
+    Head over to our contact page to find our location details, drop us a message, 
+    or get our email address so we can get your documents ready for you.
+    </p>
+    </div>
+   {/*Should add an on click function to the buttons later */}
+   <div className="cta-buttons">
+    <button className="cta-button primary" onClick={() => navigate('/')}>
+    Contact Us<span className="arrow"><IoIosArrowForward style={{ marginBottom: '-3px' }} /></span>
+    </button>
+    </div>
     </div>
     
     </div>

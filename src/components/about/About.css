@@ -108,7 +108,6 @@
   width: 100%;
   padding: 48px;
   box-sizing: border-box;
-  margin-bottom: 50px;
   border-radius: 12px;
   background-color: #F4F1EA;
 }
@@ -161,14 +160,85 @@
   color: #535353;
 }
 .about-work-cards-item:nth-of-type(1):hover .about-work-cards-icon{
-  transform: translateY(-14px);
+  transform: translateY(-20px);
 }
 .about-work-cards-item:nth-of-type(2):hover .about-work-cards-icon{
-  transform: translateY(-14px);
+  transform: translateY(-20px);
 }
 .about-work-cards-item:nth-of-type(3):hover .about-work-cards-icon{
-  transform: translateY(-14px);
+  transform: translateY(-20px);
 }
 .about-work-cards-item:nth-of-type(4):hover .about-work-cards-icon{
-  transform: translateY(-14px);
+  transform: translateY(-20px);
+}
+
+/*Call to Action*/
+.our-work-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  width: 100%;
+  background-color: #F4F1EA;
+  padding: 56px 72px;
+  box-sizing: border-box;
+  border-radius: 12px;
+}
+
+.cta-text {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 480px;
+}
+
+.cta-title {
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-size: clamp(28px, 3vw, 38px);
+  line-height: 1.15;
+  background: linear-gradient(135deg, #a74000 0%, #C05621 40%, #7A3313 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.cta-subtitle {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #696969;
+  margin: 0;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 14px;
+  flex-shrink: 0;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 26px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 6px;
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+}
+
+.cta-button.primary {
+  background-color: #C05621;
+  color: #FFFFFF;
+}
+
+.cta-button.primary:hover {
+  background-color: #A3481B;
+  transform: translateY(-1px);
 }
