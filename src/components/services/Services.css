@@ -38,7 +38,6 @@
   display: block;
 }
 .services-title .line2 {
-  display: block;
   background: linear-gradient(135deg, #a74000 0%, #C05621 40%, #7A3313 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
