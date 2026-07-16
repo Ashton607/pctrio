@@ -2,25 +2,24 @@ import { useState, useEffect } from 'react'
 import './Navbar.css'
 import logo from '../../assets/PCTRIO_LOGO.png'
 import { FaWhatsapp } from "react-icons/fa";
-import { Link as ScrollLink } from "react-scroll";
 import { useNavigate, useLocation } from 'react-router-dom'
 import { Link as RouterLink } from 'react-router-dom';
 
 const Navbar = () => {
-const [sticky, setSticky] = useState(false)
+  const [sticky, setSticky] = useState(false)
 
-const navigate = useNavigate()
-const location = useLocation()
+  const navigate = useNavigate()
+  const location = useLocation()
 
-  const handleServicesClick = () => {
+  const handleNavClick = (sectionId) => {
     if (location.pathname !== '/') {
-      navigate('/', { state: { scrollTo: 'services' } })
+      navigate('/', { state: { scrollTo: sectionId } })
     } else {
-      document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })
+      document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' })
     }
   }
 
-useEffect(() => {
+  useEffect(() => {
     const handleScroll = () => {
       setSticky(window.scrollY > 50)
     }
@@ -30,36 +29,25 @@ useEffect(() => {
 
   return (
     <nav className={sticky ? 'blur-nav' : ''}>
-    <h2>PC<span>TRIO</span>
-    </h2>
-    <ul>
+      <h2>PC<span>TRIO</span></h2>
+      <ul>
         <li>
-          {location.pathname === '/' ? (
-          <ScrollLink to="Hero" smooth={true} duration={500}>
-            Home
-          </ScrollLink>
-        ) : (
-          <span onClick={handleServicesClick} style={{ cursor: 'pointer' }}>
+          <span onClick={() => handleNavClick('hero')} style={{ cursor: 'pointer' }}>
             Home
           </span>
-        )}
         </li>
         <li>
-          {location.pathname === '/' ? (
-          <ScrollLink to="Services" smooth={true} duration={500}>
-            Services
-          </ScrollLink>
-        ) : (
-          <span onClick={handleServicesClick} style={{ cursor: 'pointer' }}>
+          <span onClick={() => handleNavClick('services')} style={{ cursor: 'pointer' }}>
             Services
           </span>
-        )}
         </li>
         <li>Our Work</li>
         <li>Contact</li>
-        <li><RouterLink to="/about">about us</RouterLink></li>
-    </ul>
-    <span className='whatsapp'><FaWhatsapp size={18} style={{marginBottom:'-4px'}}/> Direct Message</span>
+        <li><RouterLink to="/about">About Us</RouterLink></li>
+      </ul>
+      <span className='whatsapp'>
+        <FaWhatsapp size={18} style={{ marginBottom: '-4px' }} /> Direct Message
+      </span>
     </nav>
   )
 }

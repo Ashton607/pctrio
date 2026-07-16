@@ -8,7 +8,7 @@ import { FaWhatsapp,FaPhoneAlt } from "react-icons/fa";
 const Hero = () => {
 const navigate = useNavigate() 
   return (
-    <div className='Hero'>
+    <div className='Hero' id="hero">
     <div className="hero-content">
     <span className="hero-badge">Douglas Trusted Tech & Print Shop</span>
     <h1 className="hero-title">
