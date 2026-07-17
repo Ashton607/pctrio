@@ -7,6 +7,7 @@ import Services from './components/services/Services'
 import About from './components/about/About'
 import Ourwork from './components/ourwork/Ourwork'
 import Testimonial from './components/testimonial/Testimonial'
+import WhyUs from './components/whyus/WhyUs'
 
 function Home() {
   const location = useLocation()
@@ -24,6 +25,7 @@ function Home() {
       <Services />
       <Ourwork/>
       <Testimonial/>
+      <WhyUs/>
     </>
   )
 }

@@ -33,7 +33,7 @@ const Testimonial = () => {
     <div className='Testimonial'>
 
     <div className="testimonial-content">
-    <span className="testimonial-badge">our work</span>
+    <span className="testimonial-badge">customer reviews</span>
     <h1 className="testimonial-title">
         <span className="line1">Loved by,</span>
         <span className="line2">Douglas locals.</span>
