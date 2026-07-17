@@ -9,7 +9,11 @@ import laminatingImg from '../../assets/laminatingImg.jpg'
 import eventPosterImg from '../../assets/eventPosterImg.jpg'
 import bannersImg from '../../assets/bannersImg.jpg'
 import socialImg from '../../assets/socialImg.jpg'
-
+import scanningImg from '../../assets/scanningImg.jpg'
+import osImg from '../../assets/osImg.jpg'
+import officeImg from '../../assets/officeImg.avif'
+import perfImg from '../../assets/perfImg.jpg'
+import securityImg from '../../assets/security.avif'
 
 const tabsData = {
   printing: {
@@ -35,6 +39,13 @@ const tabsData = {
         title: 'Laminating',
         description: 'Pouch laminating up to A3 in matte or gloss. Protects menus, ID cards, certificates, and signage.',
         tags: ['A4 / A3', 'Matte / Gloss', 'Walk-in'],
+      },
+      {
+        image: scanningImg,
+        badge: 'Scanning',
+        title: 'Scanning to PDF / USB',
+        description: 'High-resolution flatbed scanning. Output to PDF, JPEG, or PNG saved to your USB or emailed directly.',
+        tags: ['PDF', 'USB', 'High-res'],
       },
     ],
   },
@@ -64,7 +75,7 @@ const tabsData = {
       },
     ],
   },
-  itservices: {
+  technology: {
     color: 'blue',
     items: [
       {
@@ -88,12 +99,40 @@ const tabsData = {
         description: 'Setup and mounting of security or surveillance cameras, including wiring and connecting them to a viewing/recording system.',
         tags: ['Camera', 'Install', 'CCTV'],
       },
+      {
+        image: osImg,
+        badge: 'Software',
+        title: 'OS Installations ',
+        description: 'Clean installation or reinstallation of any major operating system(Windows, Linux, Ubuntu, Mac OS), configured and ready to use.',
+        tags: ['Windows', 'Install', 'Operating System'],
+      },
+      {
+        image: officeImg,
+        badge: 'Software',
+        title: 'Microsoft Office Installation',
+        description: 'Setup of Microsofts productivity suite (Word, Excel, PowerPoint, Outlook, etc.) on the customers device.',
+        tags: ['Microsoft Office', 'Install', 'Word', 'Excel','PowerPoint'],
+      },
+      {
+        image: perfImg,
+        badge: 'Software',
+        title: 'Speeding up PCs & Laptops ',
+        description: 'Performance tuning through removing unnecessary startup programs, clearing junk files, and optimizing system settings to make slow devices run faster.',
+        tags: ['Performance tuning', 'Junk Removal', 'Optimization', 'System','Settings'],
+      },
+      {
+        image: securityImg,
+        badge: 'Security',
+        title: 'Installation of Anti-Virus',
+        description: ' Installing and configuring antivirus software to protect the device from malware, viruses, and other online threats.',
+        tags: ['Antivirus', 'Protection', 'Malware', 'System','threats'],
+      },
     ],
   },
 }
 
 const Ourwork = () => {
-const [activeTab, setActiveTab] = useState('itservices')
+const [activeTab, setActiveTab] = useState('printing')
 const currentTab = tabsData[activeTab]
 
   return (
