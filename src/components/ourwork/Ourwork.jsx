@@ -136,7 +136,7 @@ const [activeTab, setActiveTab] = useState('printing')
 const currentTab = tabsData[activeTab]
 
   return (
-    <div className='Ourwork'>
+    <div className='Ourwork' id='ourwork'>
 
     <div className="ourwork-content">
     <span className="ourwork-badge">our work</span>
