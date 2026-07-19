@@ -174,9 +174,16 @@ const Contact = () => {
             </div>
 
             <div className="info-map">
-              <div className="map-pin">
-               <FaMapMarkerAlt/>
-              </div>
+              <iframe
+              title="PC Trio Location"
+              src="https://www.google.com/maps?q=15+Barkly+Street,+Douglas,+8730,+South+Africa&output=embed"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
             </div>
           </div>
         </div>

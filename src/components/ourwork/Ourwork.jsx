@@ -164,7 +164,7 @@ const currentTab = tabsData[activeTab]
         {currentTab.items.map((item, i) => (
           <div className="work-item-card" key={i}>
             <div className="work-item-image">
-              <img src={item.image} alt={item.title} />
+              <img src={item.image} alt={item.title} loading="lazy" />
               <span className={`work-item-badge ${currentTab.color}`}>{item.badge}</span>
             </div>
             <h3>{item.title}</h3>
