@@ -9,6 +9,14 @@ import { IoIosArrowForward } from "react-icons/io";
 
 const About = () => {
 const navigate = useNavigate()
+
+const handleNavClick = (sectionId) => {
+    if (location.pathname !== '/') {
+      navigate('/', { state: { scrollTo: sectionId } })
+    } else {
+      document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
   return (
     <div className='About'>
 
@@ -84,7 +92,7 @@ const navigate = useNavigate()
     </div>
    {/*Should add an on click function to the buttons later */}
    <div className="cta-buttons">
-    <button className="cta-button primary" onClick={() => navigate('/')}>
+    <button className="cta-button primary" onClick={() => handleNavClick('contact')}>
     Contact Us<span className="arrow"><IoIosArrowForward style={{ marginBottom: '-3px' }} /></span>
     </button>
     </div>

@@ -46,7 +46,11 @@ const Navbar = () => {
             Our Work
           </span>
         </li>
-        <li>Contact</li>
+        <li>
+          <span onClick={() => handleNavClick('contact')} style={{ cursor: 'pointer' }}>
+            Contact
+          </span>
+        </li>
         <li><RouterLink to="/about">About Us</RouterLink></li>
       </ul>
       <span className='whatsapp'>
