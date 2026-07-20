@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from "react";
 import './Navbar.css'
 import logo from '../../assets/PCTRIO_LOGO.png'
 import { FaWhatsapp } from "react-icons/fa";
@@ -8,6 +8,7 @@ import { Link as RouterLink } from 'react-router-dom';
 const Navbar = () => {
   const [sticky, setSticky] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const navRef = useRef(null);
 
   const navigate = useNavigate()
   const location = useLocation()
@@ -35,9 +36,21 @@ const Navbar = () => {
     return () => { document.body.style.overflow = '' }
   }, [menuOpen])
 
+
+  // Close on outside click
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (navRef.current && !navRef.current.contains(e.target)) {
+        setMenuOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
   return (
-    <nav className={sticky ? 'blur-nav' : ''}>
-      <h2>PC<span>TRIO</span></h2>
+    <nav className={sticky ? 'blur-nav' : ''} ref={navRef}>
+      
 
       <ul className={menuOpen ? 'nav-links open' : 'nav-links'}>
         <li>
