@@ -10,6 +10,7 @@ import Testimonial from './components/testimonial/Testimonial'
 import WhyUs from './components/whyus/WhyUs'
 import Contact from './components/contact/Contact'
 import Footer from './components/footer/Footer'
+import ScrollToTop from './ScrollToTop'
 
 function Home() {
   const location = useLocation()
@@ -36,6 +37,7 @@ function Home() {
 function App() {
   return (
     <Router>
+      <ScrollToTop/>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
