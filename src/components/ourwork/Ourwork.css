@@ -191,3 +191,133 @@
   padding: 5px 12px;
   border-radius: 30px;
 }
+
+/* ---------- Large screens (1440px+) ---------- */
+@media (min-width: 1440px) {
+  .Ourwork {
+    padding: 5rem 6rem;
+  }
+
+  .ourwork-subtitle {
+    width: 40%;
+  }
+
+  .tabs-content {
+    gap: 28px;
+  }
+}
+
+/* ---------- Tablets (1024px and below) ---------- */
+@media (max-width: 1024px) {
+  .Ourwork {
+    padding: 3.5rem 2.5rem;
+  }
+
+  .ourwork-subtitle {
+    width: 70%;
+  }
+
+  .tabs-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tabs-header {
+    gap: 28px;
+  }
+}
+
+/* ---------- Small tablets / large phones (900px and below) ---------- */
+@media (max-width: 900px) {
+  .Ourwork {
+    padding: 3rem 2rem;
+  }
+
+  .ourwork-subtitle {
+    width: 90%;
+  }
+
+  .work-item-image {
+    height: 160px;
+  }
+}
+
+/* ---------- Mobile (600px and below) ---------- */
+@media (max-width: 600px) {
+  .Ourwork {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .ourwork-subtitle {
+    width: 100%;
+  }
+
+  .tabs-header {
+    gap: 20px;
+    overflow-x: auto;
+    margin-bottom: 28px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .tabs-header::-webkit-scrollbar {
+    display: none;
+  }
+
+  .tab-btn {
+    white-space: nowrap;
+  }
+
+  .tabs-content {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+/* ---------- Small mobile (480px and below) ---------- */
+@media (max-width: 480px) {
+  .Ourwork {
+    padding: 2rem 1rem;
+  }
+
+  .ourwork-badge {
+    font-size: 11px;
+    padding: 5px 12px;
+  }
+
+  .ourwork-subtitle {
+    font-size: 14px;
+  }
+
+  .tab-btn {
+    font-size: 12px;
+    padding-bottom: 12px;
+  }
+
+  .work-item-image {
+    height: 180px;
+  }
+
+  .work-item-badge {
+    font-size: 10px;
+    padding: 4px 10px;
+  }
+
+  .work-item-card h3 {
+    font-size: 16px;
+    margin: 16px 16px 8px 16px;
+  }
+
+  .work-item-card p {
+    font-size: 13px;
+    margin: 0 16px 16px 16px;
+  }
+
+  .work-item-tags {
+    margin: 0 16px 16px 16px;
+  }
+
+  .work-item-tag {
+    font-size: 11px;
+    padding: 4px 10px;
+  }
+}
