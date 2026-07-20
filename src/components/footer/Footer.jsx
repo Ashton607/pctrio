@@ -3,7 +3,7 @@ import './Footer.css'
 import { FaWhatsapp, FaFacebookF } from 'react-icons/fa'
 import { FiPhone, FiMail, FiMapPin, FiClock } from 'react-icons/fi'
 import { Link } from 'react-router-dom'
-import logo from '../../assets/PCTRIO_LOGO.png'
+import logo from '../../assets/PCTRIO_LOGO-removebg-preview.png'
 
 const trustPoints = [
   'Douglas-based, the team you can trust',
