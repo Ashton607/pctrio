@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './Contact.css'
 import { FaMapMarkerAlt,FaPhoneAlt,FaClock } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
+import emailjs from '@emailjs/browser'
 
 const tabs = [
   { key: 'printing', label: 'Printing', color: 'green' },
@@ -17,18 +18,44 @@ const ContactForm = ({ color, service }) => {
     phone: '',
     message: '',
   })
+  const [status, setStatus] = useState(null) // null | 'sending' | 'success' | 'error'
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    console.log(`${service} enquiry:`, formData)
-    // hook up your email/API logic here
-  }
 
-  
+const EMAILJS_SERVICE_ID = 'service_6aa45rb'
+const EMAILJS_TEMPLATE_ID = 'template_ga520lj'
+const EMAILJS_PUBLIC_KEY = '3jMXLV0BYe8ziv1FM'
+
+
+const handleSubmit = (e) => {
+    e.preventDefault()
+    setStatus('sending')
+
+    emailjs
+      .send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        {
+          service_type: service,
+          from_name: formData.name,
+          from_email: formData.email,
+          phone: formData.phone,
+          message: formData.message,
+        },
+        EMAILJS_PUBLIC_KEY
+      )
+      .then(() => {
+        setStatus('success')
+        setFormData({ name: '', email: '', phone: '', message: '' })
+      })
+      .catch((err) => {
+        console.error('EmailJS error:', err)
+        setStatus('error')
+      })
+  }
 
   return (
     <form className={`contact-form ${color}`} onSubmit={handleSubmit}>
@@ -80,9 +107,16 @@ const ContactForm = ({ color, service }) => {
         />
       </div>
 
-      <button type="submit" className={`form-submit ${color}`}>
-        Send Enquiry
+      <button type="submit" className={`form-submit ${color}`} disabled={status === 'sending'}>
+        {status === 'sending' ? 'Sending...' : 'Send Enquiry'}
       </button>
+
+      {status === 'success' && (
+        <p className="form-status success">Thanks! Your enquiry has been sent. We'll be in touch soon.</p>
+      )}
+      {status === 'error' && (
+        <p className="form-status error">Something went wrong. Please try again or contact us directly.</p>
+      )}
     </form>
   )
 }

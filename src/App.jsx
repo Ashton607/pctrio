@@ -9,6 +9,7 @@ import Ourwork from './components/ourwork/Ourwork'
 import Testimonial from './components/testimonial/Testimonial'
 import WhyUs from './components/whyus/WhyUs'
 import Contact from './components/contact/Contact'
+import Footer from './components/footer/Footer'
 
 function Home() {
   const location = useLocation()
@@ -40,6 +41,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />
       </Routes>
+      <Footer/>
     </Router>
   )
 }

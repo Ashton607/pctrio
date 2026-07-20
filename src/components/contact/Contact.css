@@ -298,3 +298,24 @@
   filter: grayscale(1) invert(0.9) contrast(0.9);
 }
 
+.form-status {
+  font-size: 14px;
+  margin-top: 4px;
+  border-radius: 4px;
+  width: 50%;
+  padding: 5px 12px;
+  border: #000000;
+}
+
+.form-status.success {
+  background-color: #E3F5E1;
+  color: #216624;
+  border: 1px solid #85e289;
+}
+
+.form-status.error {
+  background-color: #FBE2E1;
+  color: #C0392B;
+  border: 1px solid #d37166;
+}
+
