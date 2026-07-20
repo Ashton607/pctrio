@@ -319,3 +319,151 @@
   border: 1px solid #d37166;
 }
 
+/* ---------- Large screens (1440px+) ---------- */
+@media (min-width: 1440px) {
+  .Contact {
+    padding: 5rem 6rem;
+  }
+
+  .contact-subtitle {
+    width: 40%;
+  }
+
+  .contact-grid {
+    gap: 48px;
+  }
+}
+
+/* ---------- Tablets (1024px and below) ---------- */
+@media (max-width: 1024px) {
+  .Contact {
+    padding: 3.5rem 2.5rem;
+  }
+
+  .contact-subtitle {
+    width: 70%;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .contact-tabs-content {
+    max-width: 100%;
+  }
+}
+
+/* ---------- Small tablets / large phones (900px and below) ---------- */
+@media (max-width: 900px) {
+  .Contact {
+    padding: 3rem 2rem;
+  }
+
+  .contact-subtitle {
+    width: 90%;
+  }
+
+  .contact-tabs-header {
+    gap: 28px;
+  }
+}
+
+/* ---------- Mobile (600px and below) ---------- */
+@media (max-width: 600px) {
+  .Contact {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .contact-subtitle {
+    width: 100%;
+  }
+
+  .contact-tabs-header {
+    gap: 20px;
+    overflow-x: auto;
+    margin-bottom: 28px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .contact-tabs-header::-webkit-scrollbar {
+    display: none;
+  }
+
+  .contact-tab-btn {
+    white-space: nowrap;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .form-submit {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .form-status {
+    width: 100%;
+  }
+}
+
+/* ---------- Small mobile (480px and below) ---------- */
+@media (max-width: 480px) {
+  .Contact {
+    padding: 2rem 1rem;
+  }
+
+  .contact-badge {
+    font-size: 11px;
+    padding: 5px 12px;
+  }
+
+  .contact-subtitle {
+    font-size: 14px;
+  }
+
+  .contact-tab-btn {
+    font-size: 12px;
+    padding-bottom: 12px;
+  }
+
+  .form-group label {
+    font-size: 12px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 13px;
+    padding: 10px 12px;
+  }
+
+  .form-submit {
+    padding: 12px 20px;
+    font-size: 13px;
+  }
+
+  .info-card {
+    padding: 16px;
+    gap: 10px;
+  }
+
+  .info-icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .info-line1 {
+    font-size: 14px;
+  }
+
+  .info-line2 {
+    font-size: 12px;
+  }
+
+  .info-map {
+    height: 160px;
+  }
+}
