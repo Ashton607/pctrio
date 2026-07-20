@@ -201,3 +201,138 @@
 .testimonial-tag.orange {
   color: #ff9d1f;
 }
+
+/* ---------- Large screens (1440px+) ---------- */
+@media (min-width: 1440px) {
+  .Testimonial {
+    padding: 5rem 6rem;
+  }
+
+  .testimonial-subtitle {
+    width: 40%;
+  }
+
+  .testimonial-reviews {
+    gap: 28px;
+  }
+}
+
+/* ---------- Tablets (1024px and below) ---------- */
+@media (max-width: 1024px) {
+  .Testimonial {
+    padding: 3.5rem 2.5rem;
+  }
+
+  .testimonial-subtitle {
+    width: 70%;
+  }
+
+  .testimonial-reviews {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ---------- Small tablets / large phones (900px and below) ---------- */
+@media (max-width: 900px) {
+  .Testimonial {
+    padding: 3rem 2rem;
+  }
+
+  .testimonial-subtitle {
+    width: 90%;
+  }
+
+  .testimonial-review-badge {
+    padding: 16px 20px;
+    gap: 16px;
+  }
+}
+
+/* ---------- Mobile (600px and below) ---------- */
+@media (max-width: 600px) {
+  .Testimonial {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .testimonial-subtitle {
+    width: 100%;
+  }
+
+  .testimonial-reviews {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .testimonial-review-badge {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+/* ---------- Small mobile (480px and below) ---------- */
+@media (max-width: 480px) {
+  .Testimonial {
+    padding: 2rem 1rem;
+  }
+
+  .testimonial-badge {
+    font-size: 11px;
+    padding: 5px 12px;
+  }
+
+  .testimonial-subtitle {
+    font-size: 14px;
+  }
+
+  .review-score {
+    font-size: 26px;
+  }
+
+  .review-divider {
+    height: 32px;
+  }
+
+  .review-title {
+    font-size: 13px;
+  }
+
+  .star {
+    font-size: 12px;
+  }
+
+  .review-count {
+    font-size: 11px;
+  }
+
+  .testimonial-card {
+    padding: 22px 18px;
+  }
+
+  .quote-mark {
+    font-size: 32px;
+    margin-bottom: 6px;
+  }
+
+  .testimonial-quote {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .testimonial-avatar {
+    width: 36px;
+    height: 36px;
+    font-size: 12px;
+  }
+
+  .testimonial-name {
+    font-size: 13px;
+  }
+
+  .testimonial-role {
+    font-size: 11px;
+  }
+
+  .testimonial-tag {
+    font-size: 10px;
+  }
+}
